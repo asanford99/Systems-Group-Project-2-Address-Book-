@@ -12,22 +12,15 @@ Status load_file(AddressBook *address_book)
 {
 
 	int ret = 0;
-	int indexCount = 0;
 	int entries = 0;
 	int column = 0;
 	int currentEntry = 0;
 	int phoneNumbers = 0;
 	int emailAddresses = 0;
 	int i;
-	int j;
 
 	char c;
-	char indexCheck[32] = "";
 	char fileInput[32] = "";
-	char line[132];
-	char *token;
-
-	address_book->list = (ContactInfo*)malloc(sizeof(ContactInfo));
 
 	address_book->fp = fopen(DEFAULT_FILE, "r");
 
