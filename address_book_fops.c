@@ -55,7 +55,7 @@ Status load_file(AddressBook *address_book)
 
 		address_book->fp = fopen(DEFAULT_FILE, "r");
 
-		address_book->list = malloc(entries * sizeof(ContactInfo));
+		address_book->list = malloc((entries + 1) * sizeof(ContactInfo));
 
 		for (c = getc(address_book->fp); c != EOF; c = getc(address_book->fp)){
 
